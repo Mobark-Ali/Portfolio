@@ -1,0 +1,70 @@
+@import 'config';
+@include media-md{
+	.menu-btn{
+		visibility: hidden;
+	}
+
+	.nav{
+		visibility: visible;
+		width: 100vw;
+		.menu-nav{
+			display: flex;
+			flex-flow: row;
+			justify-content: right;
+			transform: translateX(0%);
+			height: 100%;
+			background: transparent;
+			text-align: left;
+
+			&-item{
+				display: inline;
+				padding-right: 1.5rem;
+			}
+			&-link{
+				font-size: 1.5rem;
+				//padding: 50px;
+			}
+		}
+	}
+	.about-bio{
+		.text-secondary{
+			font-size: 3rem;
+		}
+	}
+	.projects{
+	&-bio-image{
+			height: 50vh;
+		}
+		&-items{
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.text-secondary{
+			font-size: 3rem;
+		}
+	}
+
+	.contact-list{
+		grid-template-columns: repeat(2, 1fr);
+	}	
+
+	.projects{
+		&-btn{
+		opacity: 0;
+		}
+	}
+}
+
+@include media-lg{
+	.projects{
+		&-items{
+			grid-template-columns: repeat(3, 1fr);
+		}
+		&-bio-image{
+			height: 50vh;
+		}
+	}
+
+	.contact-list{
+		grid-template-columns: repeat(3, 1fr);
+	}	
+}
